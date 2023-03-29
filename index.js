@@ -23,7 +23,4 @@ CuentaAhorroLeonardo.depositoEnCuenta(200);
 console.log(CuentaAhorroLeonardo.verSaldo());
 CuentaAhorroLeonardo.retirarDeCuenta(120);
 console.log(CuentaAhorroLeonardo.verSaldo());
-
-const cuentaSimple = new Cuenta(cliente, '098', '001', 100)
-
-console.log(cuentaSimple);
+console.log(CuentaAhorroLeonardo);
