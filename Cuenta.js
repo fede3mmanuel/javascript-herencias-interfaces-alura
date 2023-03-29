@@ -29,8 +29,9 @@ export class Cuenta {
     }
 
     retirarDeCuenta(valor, comision) {
-        
-        _retirarDeCuenta(valor, 0);
+
+        // Metodo absatracto
+        throw new Error('Debe implementar el método retirar de cuenta en su clase');
     }
 
     _retirarDeCuenta(valor, comision) {
