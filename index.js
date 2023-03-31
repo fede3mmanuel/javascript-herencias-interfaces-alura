@@ -1,20 +1,28 @@
 /*Importación de clases*/
 import {Cliente} from './Cliente.js'
 
-import { CuentaAhorro } from './Cuentas/CuentaAhorro.js';
-import { CuentaCorriente } from './Cuentas/CuentaCorriente.js';
-import { CuentaNomina } from './Cuentas/CuentaNomina.js';
 import { Director } from './Empleados/Director.js';
 import { Empleado } from './Empleados/Empleado.js';
 import { Gerente } from './Empleados/Gerente.js';
+import { SistemaAutenticacion } from './SistemaAutenticacion.js';
 
 const cliente = new Cliente('Leonardo','13804050','123224');
+cliente.asignarClave('01111');
+console.log(SistemaAutenticacion.login(cliente, '1111'));
+
 const cliente2 = new Cliente('María','16979808','8989');
 
 const empleado = new Empleado('Juan Parez', '1234343', 10000);
+empleado.asignarClave('123454');
+console.log(SistemaAutenticacion.login(empleado, '123454'));
+
 const gerente = new Gerente('Pedro Rivas', '232344', 12000);
+gerente.asignarClave('656');
+console.log(SistemaAutenticacion.login(gerente, '6556'));
+
+
 const director = new Director('Elena moreno', '232323', 15000);
 
-console.log(empleado.verBonificacion());
-console.log(gerente.verBonificacion());
-console.log(director.verBonificacion());
+
+
+
