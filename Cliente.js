@@ -2,7 +2,7 @@ export class Cliente
 {
     nombreCliente;
     dniCliente;
-    rutCliente;
+    rutCliente;    
     #clave;
 
     constructor(nombreCliente, dniCliente, rutCliente) {
@@ -12,11 +12,11 @@ export class Cliente
         this.#clave = '';
     }
 
-    asignarClave(clave){
-        this.#clave =  clave;
+    asignarClave(clave) {
+        this.#clave = clave;
     }
 
-    // autenticable(clave){
-    //     return clave == this.#clave;
-    // }
+    autenticable(clave) {
+        return true;
+    }
 }
